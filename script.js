@@ -29,12 +29,15 @@ fourth.addEventListener('click', function(){
     }
 })
 
-const fifth = document.getElementById('fifth');
-const textovepole = document.getElementById('textovepole1').innerText
-const label = document.getElementById('label').innerText
+document.addEventListener('DOMContentLoaded', function() {
+    const fifth = document.getElementById('fifth');
+    const textovepole = document.getElementById('textovepole1'); // Odkaz na textové pole
+    const label = document.getElementById('label').innerText;
 
-fifth.addEventListener('click', function(){
-    
-    alert("ahoj" + textovepole + label);
-})
+    fifth.addEventListener('click', function() {
+        const textValue = textovepole.value; // Získání hodnoty textového pole
+        alert("ahoj " + textValue + " " + label);
+    });
+});
+
 
